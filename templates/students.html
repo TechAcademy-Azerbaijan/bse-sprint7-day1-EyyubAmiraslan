@@ -1,0 +1,31 @@
+{%extends 'base.html' %}
+
+{% block title%}Students{% endblock%}
+
+
+
+{% block content %} 
+    {%for student in student_list %}
+    {% if student['status'] =='active' %}
+    <h5>{{student['name']|capitalize}}</h5>
+    <h5>{{student['surname']|capitalize}}</h5>
+    <img class="photo" src="{{student['image']}}" alt="">
+    {% if student['bio']%}
+    <h5>{{student['bio']}}</h5>
+    {%else%}
+    <p>I'm a student at Tech academy</p>
+    
+    {%endif%}
+    {%endif%}
+
+
+
+
+    {% endfor %}
+
+{% endblock %}
+
+
+
+    
+

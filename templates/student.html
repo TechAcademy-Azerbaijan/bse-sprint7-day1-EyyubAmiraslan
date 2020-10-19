@@ -1,0 +1,21 @@
+{%extends 'base.html' %}
+
+{% block title%}Student Detail{% endblock%}
+
+
+{% block content %} 
+    
+    <h5>{{student_detail['name']}}</h5>
+    <h5>{{student_detail['surname']}}</h5>
+    <h5>{{student_detail['gender']}}</h5>
+    <h5>{{student_detail['status']}}</h5>
+    <img src="{{student_detail['image']}}" alt="">
+    <h5>{{student_detail['bio']}}</h5>
+
+
+
+
+
+{% endblock %}
+
+
